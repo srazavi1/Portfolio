@@ -27,7 +27,8 @@ const projectData = [
     title: "Foot Pressure & Gait Analysis",
     description: "Analyzed foot-pressure sensor data to visualize dynamic pressure distribution, center-of-pressure progression, and gait-related biomechanical patterns across foot regions.",
     tech: ["Python", "Pandas", "NumPy", "Matplotlib", "Plotly", "Biomechanics"],
-    image: "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=600&q=80",
+    image: "/projects/foot-pressure-heatmap.png",
+    imageFit: "object-contain bg-slate-950 p-2",
     icon: <FaChartLine />,
     github: "", 
     live: ""
@@ -67,7 +68,8 @@ const projectData = [
     title: "Skin Turgor – Water Retention System",
     description: "Developed an AI computer vision system to measure skin recovery time following pinch tests, quantitatively assessing skin turgor and patient hydration status.",
     tech: ["YOLOv8", "Ultralytics", "OpenCV", "Python", "Computer Vision"],
-    image: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=600&q=80",
+    image: "/projects/skin-turgor-pinch.jpg",
+    imageFit: "object-cover object-center",
     icon: <FaWater />,
     github: "", 
     live: ""
@@ -97,7 +99,8 @@ const projectData = [
     title: "Real-Time rPPG & Biomarker Monitoring",
     description: "Built a camera-based remote Photoplethysmography (rPPG) platform extracting HR, RR, HRV, and SQI from facial video in real-time with an interactive biomarker dashboard.",
     tech: ["Python", "OpenCV", "NumPy", "SciPy", "Open-rPPG", "MediaPipe", "Pandas", "Matplotlib"],
-    image: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?auto=format&fit=crop&w=600&q=80",
+    image: "/projects/face-mesh.gif",
+    imageFit: "object-cover object-top",
     icon: <FaWaveSquare />,
     github: "", 
     live: ""
@@ -140,7 +143,7 @@ const Projects = () => {
                 <img 
                   src={project.image} 
                   alt={project.title} 
-                  className="w-full h-full object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500 ease-out"
+                  className={`w-full h-full ${project.imageFit || 'object-cover'} opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500 ease-out`}
                   loading="lazy"
                 />
                 
