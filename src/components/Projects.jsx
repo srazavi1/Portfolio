@@ -72,6 +72,15 @@ const projectData = [
     image: "https://placehold.co/600x400/1f2937/3b82f6?text=Pharmacy+Management",
     github: "", 
     live: ""
+  },
+  {
+    id: 9,
+    title: "Real-Time rPPG & Multi-Biomarker Monitoring System",
+    description: "Locally hosted, real-time camera-based remote Photoplethysmography (rPPG) system utilizing facial video analysis and signal processing to extract physiological information without contact. Estimates HR, RR, HRV, and SQI, featuring vascular pulse analysis, facial perfusion symmetry, and fatigue indicators via a live multi-biomarker dashboard.",
+    tech: ["Python", "OpenCV", "NumPy", "SciPy", "Open-rPPG", "MediaPipe", "Pandas", "Matplotlib"],
+    image: "https://placehold.co/600x400/1f2937/3b82f6?text=rPPG+%26+Multi-Biomarker+System",
+    github: "", 
+    live: ""
   }
 ];
 
