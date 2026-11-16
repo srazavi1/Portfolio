@@ -26,7 +26,6 @@ const mainCertificates = [
     date: "April 2026",
     description: "This course provides a comprehensive overview of the intersection between artificial intelligence (AI) and cybersecurity. Learn how AI technologies are used to enhance cybersecurity measures and protect against evolving threats.",
     link: "https://drive.google.com/file/d/1vHb4ebS7VWISAVXlZRepCTPVatdlaeng/view?usp=drive_link",
-        link: "https://www.credly.com/badges/692de9d7-7915-49fa-b458-611d2b6e17c4/public_url",
     icon: <FaBuilding className="text-3xl" />
   },
 ];
