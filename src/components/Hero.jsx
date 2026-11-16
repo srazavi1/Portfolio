@@ -123,7 +123,7 @@ const Hero = () => {
                 </h4>
                 <div className="bg-gray-800/50 p-4 rounded-lg border border-gray-700">
                   <h5 className="text-lg font-bold text-white">Masters in Statistics and Mathematics(M.Sc)</h5>
-                  <p className="text-gray-400">R M L Avadh University Faizabad Ayodhya | 2012 - 2014</p>
+                  <p className="text-gray-400">R M L Avadh University Faizabad Ayodhya</p>
                   <p className="text-blue-400 font-semibold mt-1">Percentage: 71.06%</p>
                 </div>
               </div>
