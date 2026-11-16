@@ -15,9 +15,9 @@ const projectData = [
   {
     id: 1,
     title: "BCG Bed-Based Health Monitoring",
-    description: "Analyzed BCG & PPG signals to extract and validate Heart Rate (HR) and Respiratory Rate (RR) against reference data, with automated reporting.",
+    description: "Analyzed Ballistocardiogram (BCG) and PPG signals to extract and validate Heart Rate (HR) and Respiratory Rate (RR) against reference clinical data with automated analytics.",
     tech: ["Python", "Pandas", "SciPy", "Matplotlib", "Plotly", "Signal Processing"],
-    image: "https://placehold.co/600x380/0f172a/38bdf8?text=BCG+Health+Monitoring",
+    image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=600&q=80",
     icon: <FaHeartbeat />,
     github: "", 
     live: ""
@@ -25,9 +25,9 @@ const projectData = [
   {
     id: 2,
     title: "Foot Pressure & Gait Analysis",
-    description: "Analyzed foot-pressure sensor data to visualize pressure distribution and gait-related patterns across different foot regions.",
-    tech: ["Python", "Pandas", "NumPy", "Matplotlib", "Plotly"],
-    image: "https://placehold.co/600x380/0f172a/38bdf8?text=Foot+Pressure+Analysis",
+    description: "Analyzed foot-pressure sensor data to visualize dynamic pressure distribution, center-of-pressure progression, and gait-related biomechanical patterns across foot regions.",
+    tech: ["Python", "Pandas", "NumPy", "Matplotlib", "Plotly", "Biomechanics"],
+    image: "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=600&q=80",
     icon: <FaChartLine />,
     github: "", 
     live: ""
@@ -35,9 +35,9 @@ const projectData = [
   {
     id: 3,
     title: "PPG Data Analysis & Glucose Prediction",
-    description: "Applied Linear Regression and statistical analysis on PPG data for patient-wise analysis and glucose-level estimation.",
-    tech: ["Python", "Pandas", "Scikit-Learn", "Matplotlib", "Linear Regression"],
-    image: "https://placehold.co/600x380/0f172a/38bdf8?text=PPG+Data+Analysis",
+    description: "Applied statistical regression models on PPG pulse waveforms for patient-level feature extraction and non-invasive blood glucose estimation.",
+    tech: ["Python", "Pandas", "Scikit-Learn", "Matplotlib", "Linear Regression", "Biomedical Data"],
+    image: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=600&q=80",
     icon: <FaHeartbeat />,
     github: "", 
     live: ""
@@ -45,9 +45,9 @@ const projectData = [
   {
     id: 4,
     title: "Age & Gender Prediction Using ML",
-    description: "Developed a camera-based system using YOLOv8 to detect and predict age and gender from live camera input.",
-    tech: ["Python", "YOLOv8", "PyTorch", "OpenCV", "Google Colab"],
-    image: "https://placehold.co/600x380/0f172a/38bdf8?text=Age+Gender+Prediction",
+    description: "Engineered a real-time multi-task computer vision pipeline using YOLOv8 and deep learning to accurately detect human faces and classify age group and gender.",
+    tech: ["Python", "YOLOv8", "PyTorch", "OpenCV", "Google Colab", "Deep Learning"],
+    image: "https://images.unsplash.com/photo-1555255707-c07966088b7b?auto=format&fit=crop&w=600&q=80",
     icon: <FaEye />,
     github: "", 
     live: ""
@@ -55,9 +55,9 @@ const projectData = [
   {
     id: 5,
     title: "GCS Measurement – Foot Sole Detection",
-    description: "Built a real-time edge-AI foot-sole detection and positioning system optimized for Raspberry Pi 4.",
-    tech: ["YOLOv8-Nano", "ONNX", "OpenCV", "Raspberry Pi 4"],
-    image: "https://placehold.co/600x380/0f172a/38bdf8?text=GCS+Foot+Sole+Detection",
+    description: "Built an ultra-low latency Edge-AI system deployed on Raspberry Pi 4 using ONNX-optimized YOLOv8-Nano for real-time foot sole localization and position alignment.",
+    tech: ["YOLOv8-Nano", "ONNX", "OpenCV", "Raspberry Pi 4", "Edge AI"],
+    image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&q=80",
     icon: <FaMicrochip />,
     github: "", 
     live: ""
@@ -65,9 +65,9 @@ const projectData = [
   {
     id: 6,
     title: "Skin Turgor – Water Retention System",
-    description: "Developed an AI-based Skin Turgor analysis system using computer vision to measure skin recovery time and assess hydration-related changes.",
-    tech: ["YOLOv8", "Ultralytics", "OpenCV", "Python"],
-    image: "https://placehold.co/600x380/0f172a/38bdf8?text=Skin+Turgor+Analysis",
+    description: "Developed an AI computer vision system to measure skin recovery time following pinch tests, quantitatively assessing skin turgor and patient hydration status.",
+    tech: ["YOLOv8", "Ultralytics", "OpenCV", "Python", "Computer Vision"],
+    image: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=600&q=80",
     icon: <FaWater />,
     github: "", 
     live: ""
@@ -75,9 +75,9 @@ const projectData = [
   {
     id: 7,
     title: "Microbiology Bacteria Classification",
-    description: "A YOLOv8 and TensorFlow-based AI system deployed on Raspberry Pi 4 to detect bacteria in culture plates with real-time alerts.",
-    tech: ["TensorFlow", "YOLOv8", "Raspberry Pi"],
-    image: "https://placehold.co/600x380/0f172a/38bdf8?text=Bacteria+Classification",
+    description: "Implemented a YOLOv8 and TensorFlow AI system on Raspberry Pi 4 to detect and classify bacterial colonies on culture plates in real-time with alert notifications.",
+    tech: ["TensorFlow", "YOLOv8", "Raspberry Pi 4", "OpenCV", "Edge AI"],
+    image: "https://images.unsplash.com/photo-1576086213369-97a306d36557?auto=format&fit=crop&w=600&q=80",
     icon: <FaFlask />,
     github: "", 
     live: ""
@@ -85,9 +85,9 @@ const projectData = [
   {
     id: 8,
     title: "Pharmacy Store Management System",
-    description: "Developed a dual-camera system using YOLOv8 and PaddleOCR to detect, identify, and verify medicine strips including batch and expiry.",
+    description: "Developed an automated dual-camera verification system using YOLOv8 and PaddleOCR to detect medicine packaging and verify batch numbers, expiry dates, and labels.",
     tech: ["YOLOv8", "OpenCV", "PaddleOCR", "PyTorch", "PaddlePaddle", "TheFuzz"],
-    image: "https://placehold.co/600x380/0f172a/38bdf8?text=Pharmacy+Management",
+    image: "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=600&q=80",
     icon: <FaPills />,
     github: "", 
     live: ""
@@ -95,9 +95,9 @@ const projectData = [
   {
     id: 9,
     title: "Real-Time rPPG & Biomarker Monitoring",
-    description: "Camera-based remote Photoplethysmography (rPPG) system extracting HR, RR, HRV, and SQI from facial video with a live multi-biomarker dashboard.",
+    description: "Built a camera-based remote Photoplethysmography (rPPG) platform extracting HR, RR, HRV, and SQI from facial video in real-time with an interactive biomarker dashboard.",
     tech: ["Python", "OpenCV", "NumPy", "SciPy", "Open-rPPG", "MediaPipe", "Pandas", "Matplotlib"],
-    image: "https://placehold.co/600x380/0f172a/38bdf8?text=rPPG+Monitoring+System",
+    image: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?auto=format&fit=crop&w=600&q=80",
     icon: <FaWaveSquare />,
     github: "", 
     live: ""
@@ -135,16 +135,17 @@ const Projects = () => {
               {/* Top Accent Gradient Line on Hover */}
               <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-blue-500 via-cyan-400 to-teal-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20" />
 
-              {/* Project Image & Badges */}
+              {/* Project Real Image & Floating Badges */}
               <div className="relative w-full h-48 overflow-hidden bg-slate-950">
                 <img 
                   src={project.image} 
                   alt={project.title} 
-                  className="w-full h-full object-cover opacity-85 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500 ease-out"
+                  className="w-full h-full object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500 ease-out"
+                  loading="lazy"
                 />
                 
-                {/* Image Gradient Transition */}
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/30 to-transparent" />
+                {/* Subtle Image Gradient Transition */}
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/20 to-black/25" />
 
                 {/* Floating Project Number Badge */}
                 <span className="absolute top-3 left-3 px-2.5 py-1 bg-slate-950/80 backdrop-blur-md text-cyan-400 text-xs font-mono font-semibold rounded-md border border-cyan-500/30 shadow-sm">
@@ -165,47 +166,50 @@ const Projects = () => {
                 </h3>
                 
                 {/* Description */}
-                <p className="text-slate-300 text-sm leading-relaxed mb-5 flex-grow">
+                <p className="text-slate-300 text-sm leading-relaxed mb-6">
                   {project.description}
                 </p>
                 
-                {/* Tech Stack Individual Badges */}
-                <div className="flex flex-wrap gap-1.5 mb-5 mt-auto">
-                  {project.tech.map((tag, index) => (
-                    <span 
-                      key={index} 
-                      className="px-2.5 py-1 bg-cyan-950/30 hover:bg-cyan-900/40 text-cyan-300 text-xs font-medium rounded-md border border-cyan-800/40 hover:border-cyan-500/40 transition-colors duration-150"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-                
-                {/* Links (GitHub & Live) if available */}
-                {(project.github || project.live) && (
-                  <div className="flex space-x-4 pt-3 border-t border-slate-800/80">
-                    {project.github && (
-                      <a 
-                        href={project.github} 
-                        target="_blank" 
-                        rel="noopener noreferrer" 
-                        className="flex items-center gap-2 text-slate-400 hover:text-white transition-colors text-xs font-medium"
+                {/* Bottom Section: Tech Badges & Links */}
+                <div className="mt-auto">
+                  {/* Tech Stack Individual Badges */}
+                  <div className="flex flex-wrap gap-1.5 mb-2">
+                    {project.tech.map((tag, index) => (
+                      <span 
+                        key={index} 
+                        className="px-2.5 py-1 bg-cyan-950/30 hover:bg-cyan-900/40 text-cyan-300 text-xs font-medium rounded-md border border-cyan-800/40 hover:border-cyan-500/40 transition-colors duration-150"
                       >
-                        <FaGithub className="text-sm" /> Code
-                      </a>
-                    )}
-                    {project.live && (
-                      <a 
-                        href={project.live} 
-                        target="_blank" 
-                        rel="noopener noreferrer" 
-                        className="flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors text-xs font-medium"
-                      >
-                        <FaExternalLinkAlt className="text-xs" /> Live Demo
-                      </a>
-                    )}
+                        {tag}
+                      </span>
+                    ))}
                   </div>
-                )}
+                  
+                  {/* Links (GitHub & Live) if available */}
+                  {(project.github || project.live) && (
+                    <div className="flex space-x-4 pt-4 mt-4 border-t border-slate-800/80">
+                      {project.github && (
+                        <a 
+                          href={project.github} 
+                          target="_blank" 
+                          rel="noopener noreferrer" 
+                          className="flex items-center gap-2 text-slate-400 hover:text-white transition-colors text-xs font-medium"
+                        >
+                          <FaGithub className="text-sm" /> Code
+                        </a>
+                      )}
+                      {project.live && (
+                        <a 
+                          href={project.live} 
+                          target="_blank" 
+                          rel="noopener noreferrer" 
+                          className="flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors text-xs font-medium"
+                        >
+                          <FaExternalLinkAlt className="text-xs" /> Live Demo
+                        </a>
+                      )}
+                    </div>
+                  )}
+                </div>
               </div>
             </div>
           ))}
