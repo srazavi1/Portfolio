@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { FaDownload, FaEye, FaTimes, FaBriefcase, FaGraduationCap, FaCode } from 'react-icons/fa';
+import { FaDownload, FaEye, FaTimes, FaBriefcase, FaGraduationCap, FaCode, FaCheckCircle, FaUserAlt } from 'react-icons/fa';
 
 const Hero = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -83,7 +83,17 @@ const Hero = () => {
             </div>
 
             {/* Modal Body */}
-            <div className="p-6 md:p-10 space-y-10">
+            <div className="p-6 md:p-10 space-y-9">
+
+              {/* Professional Summary */}
+              <div className="bg-gradient-to-r from-blue-950/40 via-gray-800/40 to-gray-800/20 p-5 rounded-xl border border-blue-900/40">
+                <h4 className="text-xs font-semibold uppercase tracking-wider text-blue-400 mb-2 flex items-center gap-2 font-mono">
+                  <FaUserAlt className="text-xs" /> Professional Summary
+                </h4>
+                <p className="text-gray-300 text-sm md:text-base leading-relaxed">
+                  Data Analyst with a Master's in Statistics & Mathematics, specializing in healthcare signal processing, computer vision (YOLO/OpenCV), and interactive BI dashboarding. Experienced in translating complex sensor, biometric, and clinical data into predictive analytics and real-time actionable insights.
+                </p>
+              </div>
               
               {/* Experience Section */}
               <div>
@@ -91,13 +101,32 @@ const Hero = () => {
                   <FaBriefcase className="text-blue-500" /> Experience
                 </h4>
                 <div className="space-y-8">
-                  <div className="relative pl-6 border-l-2 border-blue-900">
-                    <div className="absolute w-3 h-3 bg-blue-500 rounded-full -left-[7px] top-2"></div>
-                    <h5 className="text-xl font-bold text-white">Data Analyst <span className="text-blue-500 text-sm ml-2">(2 Years)</span></h5>
-                    <p className="text-gray-400 text-sm mb-2">Criterion Tech Private Limited, Lucknow | May 2024 - Present</p>
-                    <ul className="list-disc list-inside text-gray-300 space-y-1 text-sm md:text-base">
-                      <li>Configured services for real-time object detection and web-based dashboards.</li>
-                      <li>Developed ML solutions like PPG Data Analysis, Urine Measurement via YOLOv8, and Foot Pressure Analysis.</li>
+                  <div className="relative pl-6 border-l-2 border-blue-600">
+                    <div className="absolute w-3.5 h-3.5 bg-blue-500 rounded-full -left-[8px] top-1.5 ring-4 ring-gray-900"></div>
+                    <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-1">
+                      <h5 className="text-xl font-bold text-white">
+                        Data Analyst <span className="text-blue-400 text-xs font-semibold ml-2 bg-blue-950/70 border border-blue-800/60 px-2.5 py-0.5 rounded-full inline-block">2 Years</span>
+                      </h5>
+                      <span className="text-gray-400 text-xs sm:text-sm font-medium">May 2024 - Present</span>
+                    </div>
+                    <p className="text-blue-400/90 text-sm font-medium mb-3">Criterion Tech Private Limited, Lucknow</p>
+                    <ul className="space-y-2.5 text-gray-300 text-sm md:text-base">
+                      <li className="flex items-start gap-2.5">
+                        <FaCheckCircle className="text-blue-500 text-sm mt-1 shrink-0" />
+                        <span>Configured and deployed backend services for real-time object detection and web-based analytical dashboards.</span>
+                      </li>
+                      <li className="flex items-start gap-2.5">
+                        <FaCheckCircle className="text-blue-500 text-sm mt-1 shrink-0" />
+                        <span>Developed ML solutions including PPG Data Analysis, Glucose Prediction, and Foot Pressure / Gait Biomechanical Pattern Analysis.</span>
+                      </li>
+                      <li className="flex items-start gap-2.5">
+                        <FaCheckCircle className="text-blue-500 text-sm mt-1 shrink-0" />
+                        <span>Engineered Remote Photoplethysmography (rPPG) and signal processing pipelines to extract Heart Rate (HR), Respiration Rate (RR), and vital biomarkers from facial video.</span>
+                      </li>
+                      <li className="flex items-start gap-2.5">
+                        <FaCheckCircle className="text-blue-500 text-sm mt-1 shrink-0" />
+                        <span>Optimized edge-AI computer vision models (YOLOv8-Nano, ONNX) on Raspberry Pi 4 for real-time edge monitoring with automated alerts.</span>
+                      </li>
                     </ul>
                   </div>                  
                 </div>
@@ -108,11 +137,46 @@ const Hero = () => {
                 <h4 className="flex items-center gap-3 text-2xl font-bold text-gray-100 border-b border-gray-800 pb-3 mb-6">
                   <FaCode className="text-blue-500" /> Technical Skills
                 </h4>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-gray-300 text-sm md:text-base">
-                  <div><strong className="text-white">Programming:</strong> Java, Python</div>
-                  <div><strong className="text-white">Libraries/Frameworks:</strong> Python, YOLOv8, YOLO11</div>
-                  <div><strong className="text-white">Tools/Platforms:</strong> Git, Jupyter Notebook, VS Code, Cursor</div>
-                  <div><strong className="text-white">Databases:</strong>MySQL, SQLite</div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  {/* Card 1: Programming & Stats */}
+                  <div className="bg-gray-800/50 p-4 rounded-xl border border-gray-700/60 hover:border-blue-500/50 transition-colors">
+                    <span className="text-xs uppercase font-mono tracking-wider text-blue-400 font-semibold block mb-1.5">
+                      Programming & Core
+                    </span>
+                    <p className="text-gray-200 text-sm font-medium leading-relaxed">
+                      Python, Java, SQL, Advanced Mathematics, Statistical Modeling
+                    </p>
+                  </div>
+
+                  {/* Card 2: Data Science & Analytics */}
+                  <div className="bg-gray-800/50 p-4 rounded-xl border border-gray-700/60 hover:border-blue-500/50 transition-colors">
+                    <span className="text-xs uppercase font-mono tracking-wider text-blue-400 font-semibold block mb-1.5">
+                      Data Analysis & Machine Learning
+                    </span>
+                    <p className="text-gray-200 text-sm font-medium leading-relaxed">
+                      Pandas, NumPy, SciPy, Scikit-Learn, Linear Regression, Signal Processing
+                    </p>
+                  </div>
+
+                  {/* Card 3: Computer Vision & Edge AI */}
+                  <div className="bg-gray-800/50 p-4 rounded-xl border border-gray-700/60 hover:border-blue-500/50 transition-colors">
+                    <span className="text-xs uppercase font-mono tracking-wider text-blue-400 font-semibold block mb-1.5">
+                      Computer Vision & Edge AI
+                    </span>
+                    <p className="text-gray-200 text-sm font-medium leading-relaxed">
+                      OpenCV, YOLOv8, YOLO11, MediaPipe, PaddleOCR, ONNX, Raspberry Pi 4
+                    </p>
+                  </div>
+
+                  {/* Card 4: BI, Visualization & Tools */}
+                  <div className="bg-gray-800/50 p-4 rounded-xl border border-gray-700/60 hover:border-blue-500/50 transition-colors">
+                    <span className="text-xs uppercase font-mono tracking-wider text-blue-400 font-semibold block mb-1.5">
+                      BI, Visualization & Tools
+                    </span>
+                    <p className="text-gray-200 text-sm font-medium leading-relaxed">
+                      Power BI, Advanced Excel, Matplotlib, Plotly, MySQL, SQLite, Git, Jupyter, VS Code
+                    </p>
+                  </div>
                 </div>
               </div>
 
@@ -121,10 +185,14 @@ const Hero = () => {
                 <h4 className="flex items-center gap-3 text-2xl font-bold text-gray-100 border-b border-gray-800 pb-3 mb-6">
                   <FaGraduationCap className="text-blue-500" /> Education
                 </h4>
-                <div className="bg-gray-800/50 p-4 rounded-lg border border-gray-700">
-                  <h5 className="text-lg font-bold text-white">Masters in Statistics and Mathematics(M.Sc)</h5>
-                  <p className="text-gray-400">R M L Avadh University Faizabad Ayodhya</p>
-                  <p className="text-blue-400 font-semibold mt-1">Percentage: 71.06%</p>
+                <div className="bg-gray-800/50 p-5 rounded-xl border border-gray-700/70 hover:border-blue-500/50 transition-colors flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                  <div>
+                    <h5 className="text-lg font-bold text-white">Masters in Statistics and Mathematics (M.Sc)</h5>
+                    <p className="text-gray-400 text-sm mt-0.5">R M L Avadh University Faizabad Ayodhya</p>
+                  </div>
+                  <span className="self-start sm:self-center px-3 py-1 bg-blue-950/70 text-blue-400 text-xs font-semibold rounded-full border border-blue-800/50 whitespace-nowrap">
+                    Percentage: 71.06%
+                  </span>
                 </div>
               </div>
 
