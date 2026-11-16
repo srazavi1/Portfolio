@@ -100,7 +100,7 @@ const projectData = [
     description: "Built a camera-based remote Photoplethysmography (rPPG) platform extracting HR, RR, HRV, and SQI from facial video in real-time with an interactive biomarker dashboard.",
     tech: ["Python", "OpenCV", "NumPy", "SciPy", "Open-rPPG", "MediaPipe", "Pandas", "Matplotlib"],
     image: "/projects/face-mesh.gif",
-    imageFit: "object-cover object-top",
+    imageFit: "object-contain bg-slate-950",
     icon: <FaWaveSquare />,
     github: "", 
     live: ""
@@ -139,7 +139,7 @@ const Projects = () => {
               <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-blue-500 via-cyan-400 to-teal-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20" />
 
               {/* Project Real Image & Floating Badges */}
-              <div className="relative w-full h-48 overflow-hidden bg-slate-950">
+              <div className="relative w-full h-48 overflow-hidden bg-slate-950 flex items-center justify-center">
                 <img 
                   src={project.image} 
                   alt={project.title} 
