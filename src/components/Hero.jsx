@@ -154,17 +154,17 @@ const Hero = () => {
                       Data Analysis & Machine Learning
                     </span>
                     <p className="text-gray-200 text-sm font-medium leading-relaxed">
-                      Pandas, NumPy, SciPy, Scikit-Learn, Linear Regression, Signal Processing
+                      Pandas, NumPy, SciPy, Scikit-Learn, Random Forest, XGBoost, Linear Regression, Signal Processing
                     </p>
                   </div>
 
-                  {/* Card 3: Computer Vision & Edge AI */}
+                  {/* Card 3: Computer Vision & Deep Learning */}
                   <div className="bg-gray-800/50 p-4 rounded-xl border border-gray-700/60 hover:border-blue-500/50 transition-colors">
                     <span className="text-xs uppercase font-mono tracking-wider text-blue-400 font-semibold block mb-1.5">
-                      Computer Vision & Edge AI
+                      Computer Vision & Deep Learning
                     </span>
                     <p className="text-gray-200 text-sm font-medium leading-relaxed">
-                      OpenCV, YOLOv8, YOLO11, MediaPipe, PaddleOCR, ONNX, Raspberry Pi 4
+                      OpenCV, CNN, ResNet-50, YOLOv8, YOLO11, MediaPipe, PaddleOCR, ONNX, Raspberry Pi 4
                     </p>
                   </div>
 
