@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { FaLinkedin, FaGithub, FaEnvelope, FaTimes, FaPaperPlane } from 'react-icons/fa';
-import emailjs from '@emailjs/browser'; // EmailJS Import kiya
+import { FaLinkedin, FaGithub, FaEnvelope, FaTimes, FaPaperPlane, FaCheckCircle, FaExclamationCircle } from 'react-icons/fa';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -10,23 +10,30 @@ const Contact = () => {
     message: ''
   });
   
-  // Sending State (Loading dikhane ke liye)
   const [isSending, setIsSending] = useState(false);
+  const [statusMessage, setStatusMessage] = useState(null); // { type: 'success' | 'error', text: string }
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
+  const handleOpenModal = () => {
+    setStatusMessage(null);
+    setIsModalOpen(true);
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    setIsSending(true); // Loading shuru
+    setIsSending(true);
+    setStatusMessage(null);
 
     // --- EMAILJS CONFIGURATION ---
-    const serviceID = 'service_y7is9h7';      // Yahan apni Service ID dalein
-    const templateID = 'template_j3takea';    // Yahan apni Template ID dalein
-    const publicKey = 'ZSUEGaZM0onOy-Xzl';      // Yahan apni Public Key dalein
+    const serviceID = 'service_y7is9h7';
+    const templateID = 'template_j3takea';
+    const publicKey = 'ZSUEGaZM0onOy-Xzl';
 
-    // Template ke variables (jo humne EmailJS website par {{name}} banaye the)
+    const senderName = formData.name;
+
     const templateParams = {
       from_name: formData.name,
       from_email: formData.email,
@@ -36,14 +43,24 @@ const Contact = () => {
     emailjs.send(serviceID, templateID, templateParams, publicKey)
       .then((response) => {
         console.log('SUCCESS!', response.status, response.text);
-        alert(`Thank you, ${formData.name}! Your message has been sent successfully.`);
-        setIsModalOpen(false);
+        setStatusMessage({
+          type: 'success',
+          text: `Thank you, ${senderName}! Your message has been sent successfully. I will get back to you soon.`
+        });
         setFormData({ name: '', email: '', message: '' });
         setIsSending(false);
+        // Automatically close after 3 seconds on success
+        setTimeout(() => {
+          setIsModalOpen(false);
+          setStatusMessage(null);
+        }, 3000);
       })
       .catch((err) => {
         console.log('FAILED...', err);
-        alert("Failed to send message. Please try again later.");
+        setStatusMessage({
+          type: 'error',
+          text: 'Failed to send message. Please try again or reach out directly on LinkedIn.'
+        });
         setIsSending(false);
       });
   };
@@ -55,12 +72,12 @@ const Contact = () => {
           Let's <span className="text-blue-500">Connect</span>
         </h2>
         <p className="text-gray-400 text-lg md:text-xl mb-10">
-          I'm always open to discussing new projects, AI deployment pipelines, or system architecture.
+          I'm always open to discussing new projects, AI deployment pipelines, or healthcare data analytics.
         </p>
         
         <div className="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6">
           <button 
-            onClick={() => setIsModalOpen(true)}
+            onClick={handleOpenModal}
             className="flex items-center justify-center gap-3 w-full sm:w-auto px-8 py-4 bg-blue-600 hover:bg-blue-700 rounded-lg font-bold text-lg transition-all shadow-lg hover:shadow-blue-600/30 hover:-translate-y-1 cursor-pointer"
           >
             <FaEnvelope /> Email Me
@@ -79,18 +96,39 @@ const Contact = () => {
       {/* --- POPUP MODAL --- */}
       {isModalOpen && (
         <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 backdrop-blur-sm p-4 animate-fade-in">
-          <div className="bg-gray-900 border border-gray-700 rounded-2xl w-full max-w-lg shadow-2xl relative overflow-hidden">
+          <div className="bg-gray-900 border border-gray-700 rounded-2xl w-full max-w-lg shadow-2xl relative overflow-hidden text-left">
             
             <div className="bg-gray-800/50 p-4 border-b border-gray-700 flex justify-between items-center">
               <h3 className="text-xl font-bold text-white flex items-center gap-2">
                 <FaPaperPlane className="text-blue-500" /> Send Message
               </h3>
-              <button onClick={() => setIsModalOpen(false)} className="text-gray-400 hover:text-red-500 transition-colors text-xl">
+              <button 
+                onClick={() => setIsModalOpen(false)} 
+                className="text-gray-400 hover:text-red-500 transition-colors text-xl"
+              >
                 <FaTimes />
               </button>
             </div>
 
-            <form onSubmit={handleSubmit} className="p-6 space-y-4 text-left">
+            <form onSubmit={handleSubmit} className="p-6 space-y-4">
+              {/* Status Alert Banner */}
+              {statusMessage && (
+                <div 
+                  className={`p-4 rounded-lg text-sm flex items-start gap-3 border ${
+                    statusMessage.type === 'success' 
+                      ? 'bg-emerald-950/60 border-emerald-500/50 text-emerald-300' 
+                      : 'bg-rose-950/60 border-rose-500/50 text-rose-300'
+                  }`}
+                >
+                  {statusMessage.type === 'success' ? (
+                    <FaCheckCircle className="text-lg shrink-0 text-emerald-400 mt-0.5" />
+                  ) : (
+                    <FaExclamationCircle className="text-lg shrink-0 text-rose-400 mt-0.5" />
+                  )}
+                  <span>{statusMessage.text}</span>
+                </div>
+              )}
+
               <div>
                 <label className="block text-sm font-medium text-gray-400 mb-1">Your Name</label>
                 <input 

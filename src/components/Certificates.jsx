@@ -3,7 +3,7 @@ import { FaCertificate, FaExternalLinkAlt, FaLinkedin, FaPython, FaServer, FaLap
 const mainCertificates = [
   {
     id: 1,
-    title: "Java and Python programming from the ground up and gain the skills to build real world applications like a pro",
+    title: "Java & Python Programming Mastery",
     issuer: "Udemy",
     date: "March 2025",
     description: "Ready to elevate your programming skills and unlock new career opportunities? Welcome to 'Java & Python Programming Mastery: Learn to Code Like a Pro,' the ultimate Udemy course designed to turn you into a proficient coder in two of the most influential programming languages: Java and Python.",
@@ -14,7 +14,7 @@ const mainCertificates = [
     id: 2,
     title: "Generative AI Essentials",
     issuer: "TCS ION",
-    date: "April6",
+    date: "April 2024",
     description: "This course provides a comprehensive overview of generative AI, covering its principles, applications, and ethical considerations. Learn how to leverage generative models for creative tasks and problem-solving.",
     link: "https://drive.google.com/file/d/1-GUnn9cfSXU51VGQf8PtXwrIEZU5WyEL/view?usp=drive_link",
     icon: <FaLinkedin className="text-3xl" />

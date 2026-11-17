@@ -16,6 +16,7 @@ const Navbar = () => {
         <a href="#home" className="text-2xl font-bold tracking-wide cursor-pointer flex items-center gap-1 font-mono group">
           <span className="text-blue-500 text-3xl transition-transform duration-300 group-hover:-translate-x-1">&lt;</span>
           <span className="text-white group-hover:text-blue-400 transition-colors duration-300">SUHAIL</span>
+          <span className="text-blue-500 text-3xl transition-transform duration-300 group-hover:translate-x-1">/&gt;</span>
         </a>
         {/* --- NEW CODE-STYLE LOGO END --- */}
         

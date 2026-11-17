@@ -18,7 +18,7 @@ const Hero = () => {
           </h1>
           
           <h2 className="text-lg md:text-xl lg:text-2xl text-gray-300 font-medium max-w-2xl leading-relaxed">
-            Data Analyst | SQL | Power BI | Python | Advanced Excel | Dashboard Specialist | Healthcare Data | Statistical Analysis |<br className="hidden lg:block" />
+            Data Analyst | SQL | Power BI | Python | Advanced Excel | Dashboard Specialist | Healthcare Data | Statistical Analysis <br className="hidden lg:block" />
             Data Analyst @ Criterion Tech | M.Sc in Statistics with Mathematics</h2>
           
           <p className="text-gray-400 text-base md:text-lg max-w-2xl leading-relaxed">
