@@ -38,7 +38,8 @@ const projectData = [
     title: "PPG Data Analysis & Glucose Prediction",
     description: "Applied statistical regression models on PPG pulse waveforms for patient-level feature extraction and non-invasive blood glucose estimation.",
     tech: ["Python", "Pandas", "Scikit-Learn", "Matplotlib", "Linear Regression", "Biomedical Data"],
-    image: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=600&q=80",
+    image: "/projects/ppg-glucose-dashboard.jpg",
+    imageFit: "object-cover object-center",
     icon: <FaHeartbeat />,
     github: "", 
     live: ""
@@ -48,7 +49,8 @@ const projectData = [
     title: "Age & Gender Prediction Using ML",
     description: "Engineered a real-time multi-task computer vision pipeline using YOLOv8 and deep learning to accurately detect human faces and classify age group and gender.",
     tech: ["Python", "YOLOv8", "PyTorch", "OpenCV", "Google Colab", "Deep Learning"],
-    image: "https://images.unsplash.com/photo-1555255707-c07966088b7b?auto=format&fit=crop&w=600&q=80",
+    image: "/projects/age-gender-detection.jpg",
+    imageFit: "object-cover object-top",
     icon: <FaEye />,
     github: "", 
     live: ""
@@ -58,7 +60,8 @@ const projectData = [
     title: "GCS Measurement – Foot Sole Detection",
     description: "Built an ultra-low latency Edge-AI system deployed on Raspberry Pi 4 using ONNX-optimized YOLOv8-Nano for real-time foot sole localization and position alignment.",
     tech: ["YOLOv8-Nano", "ONNX", "OpenCV", "Raspberry Pi 4", "Edge AI"],
-    image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&q=80",
+    image: "/projects/foot-sole-detection.jpg",
+    imageFit: "object-cover object-center",
     icon: <FaMicrochip />,
     github: "", 
     live: ""
