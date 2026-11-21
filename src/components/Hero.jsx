@@ -52,12 +52,11 @@ const Hero = () => {
             {/* Image Container */}
             <div className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full border-4 border-gray-800 overflow-hidden shadow-2xl">
               <img 
-                src="/syed-suhail-raza-portfolio.jpg" 
+                src="/syed-suhail-raza-portfolio.png" 
                 alt="Syed Suhail Raza - Data Analyst" 
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 onError={(e) => {
-                  // Agar photo nahi mili, toh ek dummy avatar dikhayega error se bachne ke liye
-                  e.target.src = "https://placehold.co/400x400/1f2937/3b82f6?text=Syed+Suhail+Raza";
+                  e.target.src = "/syed-suhail-raza-portfolio.jpg";
                 }}
               />
             </div>
